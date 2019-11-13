@@ -91,4 +91,4 @@ def handler(event, context):
     )
 
     print('PutItem succeeded:')
-    print(json.dumps(response, indent=2)
+    print(json.dumps(response, indent=2))
