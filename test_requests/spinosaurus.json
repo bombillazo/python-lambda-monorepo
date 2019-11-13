@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Spinosaurus aegyptiacus",
+        "diet": "carnivore", 
+        "period": "Cretaceous",
+        "weight": 39600,
+        "armor": false,
+        "hybrid": false
+    }
+}

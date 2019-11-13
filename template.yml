@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Python Lambda Monorepo - Example
+Resources:
+  createdinosaur:
+    FunctionName: create_dinosaur
+    Description: Create Dinosaur Lambda
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.7
+      Handler: main.handler
+      CodeUri: services/create_dinosaur
+      Timeout: 20
+      Environment:
+        Variables:
+          PYTHONPATH: ./packages
+          ENVIRONMENT: local
+  createhybriddinosaur:
+    FunctionName: create_hybrid_dinosaur
+    Description: Create Bybrid Dinosaur Lambda
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.7
+      Handler: main.handler
+      CodeUri: services/create_hybrid_dinosaur
+      Timeout: 20
+      Environment:
+        Variables:
+          PYTHONPATH: ./packages
+          ENVIRONMENT: local
+  fightdinosaurs:
+    FunctionName: fight_dinosaurs
+    Description: List Discovered Dinosaurs Lambda
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.7
+      Handler: main.handler
+      CodeUri: services/fight_dinosaurs
+      Timeout: 20
+      Environment:
+        Variables:
+          PYTHONPATH: ./packages
+          ENVIRONMENT: local

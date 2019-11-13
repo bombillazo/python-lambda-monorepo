@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Giganotosaurus carolini",
+        "diet": "carnivore", 
+        "period": "Cretaceous",
+        "weight": 28600,
+        "armor": false,
+        "hybrid": false
+    }
+}

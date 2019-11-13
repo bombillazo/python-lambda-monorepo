@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Stegosaurus stenops",
+        "diet": "herbivore", 
+        "period": "Jurassic",
+        "weight": 14300,
+        "armor": true,
+        "hybrid": false
+    }
+}

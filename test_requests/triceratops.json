@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Triceratops prorsus",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 23000,
+        "armor": true,
+        "hybrid": false
+    }
+}

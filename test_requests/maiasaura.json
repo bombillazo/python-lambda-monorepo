@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Maiasaura peeblesorum",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 19500,
+        "armor": true,
+        "hybrid": false
+    }
+}

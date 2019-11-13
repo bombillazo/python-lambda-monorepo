@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Ankylosaurus magniventris",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 10500,
+        "armor": true,
+        "hybrid": false
+    }
+}

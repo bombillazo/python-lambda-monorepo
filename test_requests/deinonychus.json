@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Deinonychus antirrhopus",
+        "diet": "carnivore", 
+        "period": "Cretaceous",
+        "weight": 200,
+        "armor": false,
+        "hybrid": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Parasaurolophus walkeri",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 5500,
+        "armor": false,
+        "hybrid": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Iguanodon bernissartensis",
+        "diet": "herbivore", 
+        "period": "Jurassic",
+        "weight": 6600,
+        "armor": true,
+        "hybrid": false
+    }
+}

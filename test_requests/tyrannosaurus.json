@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Tyrannosaurus rex",
+        "diet": "carnivore", 
+        "period": "Cretaceous",
+        "weight": 28700,
+        "armor": false,
+        "hybrid": false
+    }
+}

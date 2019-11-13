@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Argentinosaurus huinculensis",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 209400,
+        "armor": false,
+        "hybrid": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Herrerasaurus ischigualastensis",
+        "diet": "carnivore", 
+        "period": "Triassic",
+        "weight": 700,
+        "armor": false,
+        "hybrid": false
+    }
+}

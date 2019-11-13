@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Brachiosaurus altithorax",
+        "diet": "herbivore", 
+        "period": "Jurassic",
+        "weight": 121200,
+        "armor": false,
+        "hybrid": false
+    }
+}

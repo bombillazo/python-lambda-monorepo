@@ -1,0 +1,53 @@
+version: 2
+orbs:
+  aws-cli: circleci/aws-cli@0.1.4
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.0
+    working_directory: ~/tmp
+    executor: aws-cli/default
+
+    steps:
+      - checkout
+      - aws-cli/install
+      - run:
+          name: Configure ENV files based on environment
+          command: |
+            echo 'export CIRCLE_ENV=production' >> $BASH_ENV
+            echo 'export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID' >> $BASH_ENV
+            echo 'export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY' >> $BASH_ENV
+            source $BASH_ENV
+            echo "Setting AWS environment"
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default
+            aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default
+            aws configure set region us-east-1 --profile default
+      - run:
+          name: Zip and deploy Lambda Functions
+          command: |
+            ROOT=$PWD
+            # iterate through lambdas
+            for LAMBDA_PATH in services/*/
+            do
+                FUNCTION_NAME=$(basename $LAMBDA_PATH)
+                if [[ -f services/$FUNCTION_NAME/requirements.txt ]]; then
+                  echo "Installing packages..."
+                  pip install -r services/$FUNCTION_NAME/requirements.txt --target services/$FUNCTION_NAME/packages/ --find-links ./packages
+                fi
+                cd services/$FUNCTION_NAME
+                echo "Building $FUNCTION_NAME..."
+                zip main.zip *.py */ -x "test/*" -r 
+                echo "Deploying $FUNCTION_NAME..."
+                aws lambda update-function-code --function-name quadrant-$FUNCTION_NAME-lambda-$CIRCLE_ENV --region us-east-1 --zip-file fileb://main.zip
+                cd $ROOT
+            done
+
+workflows:
+  version: 2
+  build-deploy:
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

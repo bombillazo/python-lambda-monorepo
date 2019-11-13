@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Patagotitan mayorum",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 152100,
+        "armor": false,
+        "hybrid": false
+    }
+}

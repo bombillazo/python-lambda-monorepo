@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Pachycephalosaurus wyomingensis ",
+        "diet": "herbivore", 
+        "period": "Cretaceous",
+        "weight": 900,
+        "armor": true,
+        "hybrid": false
+    }
+}

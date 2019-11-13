@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Dilophosaurus wetherilli",
+        "diet": "carnivore", 
+        "period": "Jurassic",
+        "weight": 900,
+        "armor": false,
+        "hybrid": false
+    }
+}

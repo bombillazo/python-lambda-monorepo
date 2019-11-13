@@ -1,0 +1,10 @@
+{
+    "dinosaur":{
+        "name": "Plateosaurus engelhardtis",
+        "diet": "herbivore", 
+        "period": "Triassic",
+        "weight": 8800,
+        "armor": false,
+        "hybrid": false
+    }
+}
