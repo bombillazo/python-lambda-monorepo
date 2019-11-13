@@ -14,7 +14,7 @@ install:
 		pip install -r $$FILE --target services/${LAMBDA}/packages/ --find-links ./packages --upgrade; \
 	fi
 
-run-all:
+add-all-dinos:
 	for FILE in test_requests/*.json ; do \
 		sam local invoke createdinosaur -e $$FILE --profile bombillazo; \
 	done
