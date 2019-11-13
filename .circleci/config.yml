@@ -39,7 +39,7 @@ jobs:
                 zip main.zip *.py */ -x "test/*" -r
                 if [[ $CIRCLE_BRANCH = "master" ]]; then
                   echo "Deploying $FUNCTION_NAME..."
-                  aws lambda update-function-code --function-name quadrant-$FUNCTION_NAME-lambda-$CIRCLE_ENV --region us-east-1 --zip-file fileb://main.zip
+                  aws lambda update-function-code --function-name $FUNCTION_NAME --region us-east-1 --zip-file fileb://main.zip
                 fi
                 cd $ROOT
             done
