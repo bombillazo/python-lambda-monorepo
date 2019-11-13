@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@0.1.4
 jobs:
@@ -36,9 +36,11 @@ jobs:
                 fi
                 cd services/$FUNCTION_NAME
                 echo "Building $FUNCTION_NAME..."
-                zip main.zip *.py */ -x "test/*" -r 
-                echo "Deploying $FUNCTION_NAME..."
-                aws lambda update-function-code --function-name quadrant-$FUNCTION_NAME-lambda-$CIRCLE_ENV --region us-east-1 --zip-file fileb://main.zip
+                zip main.zip *.py */ -x "test/*" -r
+                if [[ $CIRCLE_BRANCH = "master" ]]; then
+                  echo "Deploying $FUNCTION_NAME..."
+                  aws lambda update-function-code --function-name quadrant-$FUNCTION_NAME-lambda-$CIRCLE_ENV --region us-east-1 --zip-file fileb://main.zip
+                fi
                 cd $ROOT
             done
 
