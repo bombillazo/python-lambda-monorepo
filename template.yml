@@ -14,7 +14,6 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
-          ENVIRONMENT: local
   createhybriddinosaur:
     FunctionName: create_hybrid_dinosaur
     Description: Create Bybrid Dinosaur Lambda
@@ -27,7 +26,6 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
-          ENVIRONMENT: local
   fightdinosaurs:
     FunctionName: fight_dinosaurs
     Description: List Discovered Dinosaurs Lambda
@@ -40,4 +38,3 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
-          ENVIRONMENT: local
