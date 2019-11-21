@@ -10,7 +10,7 @@ upload:
 	cd services/${LAMBDA}; \
 	aws lambda update-function-code --function-name ${LAMBDA} --region us-east-1 --zip-file fileb://main.zip
 
-install-package:
+install-packages:
 	FILE=services/${LAMBDA}/requirements.txt; \
 	if [[ -f "$$FILE" ]]; then \
 		pip install -r $$FILE --target services/${LAMBDA}/packages/ --find-links ./packages --upgrade; \
