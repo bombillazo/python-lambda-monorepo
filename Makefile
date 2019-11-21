@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 compress:	
 	cd services/${LAMBDA}; \
 	zip main.zip *.py */ -x "test/*" -r 
