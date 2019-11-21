@@ -14,6 +14,12 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /create_dinosaur
+            Method: any
   createhybriddinosaur:
     FunctionName: create_hybrid_dinosaur
     Description: Create Bybrid Dinosaur Lambda
@@ -26,6 +32,12 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /create_hybrid_dinosaur
+            Method: any
   fightdinosaurs:
     FunctionName: fight_dinosaurs
     Description: List Discovered Dinosaurs Lambda
@@ -38,3 +50,9 @@ Resources:
       Environment:
         Variables:
           PYTHONPATH: ./packages
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /fight_dinosaurs
+            Method: any
