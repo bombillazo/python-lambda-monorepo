@@ -31,7 +31,7 @@ jobs:
                 fi
                 cd services/$FUNCTION_NAME
                 echo "Building $FUNCTION_NAME..."
-                zip main.zip *.py */ -x "test/*" -r
+                zip main.zip *.py */ -r
                 if [[ $CIRCLE_BRANCH = "master" ]]; then
                   echo "Deploying $FUNCTION_NAME..."
                   aws lambda update-function-code --function-name $FUNCTION_NAME --region us-east-1 --zip-file fileb://main.zip
