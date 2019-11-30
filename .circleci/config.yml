@@ -6,7 +6,6 @@ jobs:
     docker:
       - image: circleci/python:3.7.0
     working_directory: ~/tmp
-    executor: aws-cli/default
 
     steps:
       - checkout
