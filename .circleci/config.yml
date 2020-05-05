@@ -13,6 +13,29 @@ jobs:
       - run:
           name: Configure ENV files based on environment
           command: |
+          cat << "EOF"
+       _,.
+     ,` -.)
+    '( _/'-\\-.               
+   /,|`--._,-^|            ,     
+   \_| |`-._/||          ,'|       
+     |  `-, / |         /  /      
+     |     || |        /  /       
+      `r-._||/   __   /  /  
+  __,-<_     )`-/  `./  /
+ '  \   `---'   \   /  / 
+     |           |./  /  
+     /           //  /     
+ \_/' \         |/  /         
+  |    |   _,^-'/  /              
+  |    , ``  (\/  /_        
+   \,.->._    \X-=/^         
+   (  /   `-._//^`  
+    `Y-.____(__}              
+     |     {__)           
+           ()`     
+EOF
+            exit 1
             echo "Setting AWS environment"
             aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
             aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
