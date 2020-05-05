@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Configure ENV files based on environment
           command: |
-            cat << "EOF"
+            cat \<< "EOF"
                   _,.
                 ,` -.)
                 '( _/'-\\-.               
