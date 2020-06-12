@@ -9,14 +9,17 @@ This repository contains a micro-service monorepo example project using Python, 
 - Create my own custom Python package
 - Reuse my custom package in multiple Lambda functions
 - Automate the build and deployment process for the Lambda function. This includes:
-  - Have a single code location for my custom packages in the project. No copy pasting my code across the different services.
-  - Each Lambda function installs ***only*** the packages it needs (no blind installation of all pacakges "just in case")
+  - Have a single code location for my custom packages in the project.
+  - No copy pasting my code across the different services.
+  - Each Lambda function installs ***only*** the packages it needs (no blind installation of all packages "just in case")
+  - Deploy code to AWS upon merging to master branch
 - Build something cool related to dinosaurs
 
 ### Potential future improvements
 
 - Local testing
 - Automate cleanup of project
+- Tag-based code deployment
 
 ## Medium
 
